@@ -14,7 +14,16 @@ namespace MingEventsApi.Models
     
     public partial class City
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public City()
+        {
+            this.Establishment = new HashSet<Establishment>();
+        }
+    
         public int city_id { get; set; }
         public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Establishment> Establishment { get; set; }
     }
 }

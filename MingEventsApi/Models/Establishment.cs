@@ -14,10 +14,23 @@ namespace MingEventsApi.Models
     
     public partial class Establishment
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Establishment()
+        {
+            this.Armchair = new HashSet<Armchair>();
+            this.Event = new HashSet<Event>();
+        }
+    
         public int establish_id { get; set; }
         public string name { get; set; }
         public string direction { get; set; }
         public int capacity { get; set; }
         public int city_id { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Armchair> Armchair { get; set; }
+        public virtual City City { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Event> Event { get; set; }
     }
 }

@@ -95,7 +95,7 @@
           <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="role_id" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Armchair__establ__44FF419A">
+        <Association Name="FK__Armchair__establ__47DBAE45">
           <End Role="Establishment" Type="Self.Establishment" Multiplicity="0..1" />
           <End Role="Armchair" Type="Self.Armchair" Multiplicity="*" />
           <ReferentialConstraint>
@@ -107,7 +107,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Armchair__user_i__45F365D3">
+        <Association Name="FK__Armchair__user_i__48CFD27E">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Armchair" Type="Self.Armchair" Multiplicity="*" />
           <ReferentialConstraint>
@@ -119,7 +119,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chat__user1_id__48CFD27E">
+        <Association Name="FK__Chat__user1_id__49C3F6B7">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Chat" Type="Self.Chat" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chat__user2_id__49C3F6B7">
+        <Association Name="FK__Chat__user2_id__4AB81AF0">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Chat" Type="Self.Chat" Multiplicity="*" />
           <ReferentialConstraint>
@@ -143,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Establish__city___398D8EEE">
+        <Association Name="FK__Establish__city___4BAC3F29">
           <End Role="City" Type="Self.City" Multiplicity="1" />
           <End Role="Establishment" Type="Self.Establishment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -155,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Event__establish__4222D4EF">
+        <Association Name="FK__Event__establish__4CA06362">
           <End Role="Establishment" Type="Self.Establishment" Multiplicity="1" />
           <End Role="Event" Type="Self.Event" Multiplicity="*" />
           <ReferentialConstraint>
@@ -167,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Reserve_T__armch__5070F446">
+        <Association Name="FK__Reserve_T__armch__4E88ABD4">
           <End Role="Armchair" Type="Self.Armchair" Multiplicity="1" />
           <End Role="Reserve_Ticket" Type="Self.Reserve_Ticket" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Users__role_id__3F466844">
+        <Association Name="FK__Users__role_id__5070F446">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -225,31 +225,31 @@
           <EntitySet Name="Reserve_Ticket" EntityType="Self.Reserve_Ticket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Armchair__establ__44FF419A" Association="Self.FK__Armchair__establ__44FF419A">
+          <AssociationSet Name="FK__Armchair__establ__47DBAE45" Association="Self.FK__Armchair__establ__47DBAE45">
             <End Role="Establishment" EntitySet="Establishment" />
             <End Role="Armchair" EntitySet="Armchair" />
           </AssociationSet>
-          <AssociationSet Name="FK__Armchair__user_i__45F365D3" Association="Self.FK__Armchair__user_i__45F365D3">
+          <AssociationSet Name="FK__Armchair__user_i__48CFD27E" Association="Self.FK__Armchair__user_i__48CFD27E">
             <End Role="Users" EntitySet="Users" />
             <End Role="Armchair" EntitySet="Armchair" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chat__user1_id__48CFD27E" Association="Self.FK__Chat__user1_id__48CFD27E">
+          <AssociationSet Name="FK__Chat__user1_id__49C3F6B7" Association="Self.FK__Chat__user1_id__49C3F6B7">
             <End Role="Users" EntitySet="Users" />
             <End Role="Chat" EntitySet="Chat" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chat__user2_id__49C3F6B7" Association="Self.FK__Chat__user2_id__49C3F6B7">
+          <AssociationSet Name="FK__Chat__user2_id__4AB81AF0" Association="Self.FK__Chat__user2_id__4AB81AF0">
             <End Role="Users" EntitySet="Users" />
             <End Role="Chat" EntitySet="Chat" />
           </AssociationSet>
-          <AssociationSet Name="FK__Establish__city___398D8EEE" Association="Self.FK__Establish__city___398D8EEE">
+          <AssociationSet Name="FK__Establish__city___4BAC3F29" Association="Self.FK__Establish__city___4BAC3F29">
             <End Role="City" EntitySet="City" />
             <End Role="Establishment" EntitySet="Establishment" />
           </AssociationSet>
-          <AssociationSet Name="FK__Event__establish__4222D4EF" Association="Self.FK__Event__establish__4222D4EF">
+          <AssociationSet Name="FK__Event__establish__4CA06362" Association="Self.FK__Event__establish__4CA06362">
             <End Role="Establishment" EntitySet="Establishment" />
             <End Role="Event" EntitySet="Event" />
           </AssociationSet>
-          <AssociationSet Name="FK__Reserve_T__armch__5070F446" Association="Self.FK__Reserve_T__armch__5070F446">
+          <AssociationSet Name="FK__Reserve_T__armch__4E88ABD4" Association="Self.FK__Reserve_T__armch__4E88ABD4">
             <End Role="Armchair" EntitySet="Armchair" />
             <End Role="Reserve_Ticket" EntitySet="Reserve_Ticket" />
           </AssociationSet>
@@ -257,7 +257,7 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Reserve_Ticket" EntitySet="Reserve_Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK__Users__role_id__3F466844" Association="Self.FK__Users__role_id__3F466844">
+          <AssociationSet Name="FK__Users__role_id__5070F446" Association="Self.FK__Users__role_id__5070F446">
             <End Role="Role" EntitySet="Role" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
@@ -280,6 +280,9 @@
           <Property Name="rows" Type="Int32" Nullable="false" />
           <Property Name="user_id" Type="Int32" />
           <Property Name="establish_id" Type="Int32" />
+          <NavigationProperty Name="Establishment" Relationship="Self.FK__Armchair__establ__47DBAE45" FromRole="Armchair" ToRole="Establishment" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Armchair__user_i__48CFD27E" FromRole="Armchair" ToRole="Users" />
+          <NavigationProperty Name="Users1" Relationship="Self.Reserve_Ticket" FromRole="Armchair" ToRole="Users" />
         </EntityType>
         <EntityType Name="Chat">
           <Key>
@@ -289,6 +292,9 @@
           <Property Name="send_date" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="user1_id" Type="Int32" />
           <Property Name="user2_id" Type="Int32" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Chat__user1_id__49C3F6B7" FromRole="Chat" ToRole="Users" />
+          <NavigationProperty Name="Users1" Relationship="Self.FK__Chat__user2_id__4AB81AF0" FromRole="Chat" ToRole="Users" />
+          <NavigationProperty Name="Message" Relationship="Self.fk_messages_chat" FromRole="Chat" ToRole="Message" />
         </EntityType>
         <EntityType Name="City">
           <Key>
@@ -296,6 +302,7 @@
           </Key>
           <Property Name="city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Establishment" Relationship="Self.FK__Establish__city___4BAC3F29" FromRole="City" ToRole="Establishment" />
         </EntityType>
         <EntityType Name="Establishment">
           <Key>
@@ -306,6 +313,9 @@
           <Property Name="direction" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="capacity" Type="Int32" Nullable="false" />
           <Property Name="city_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Armchair" Relationship="Self.FK__Armchair__establ__47DBAE45" FromRole="Establishment" ToRole="Armchair" />
+          <NavigationProperty Name="City" Relationship="Self.FK__Establish__city___4BAC3F29" FromRole="Establishment" ToRole="City" />
+          <NavigationProperty Name="Event" Relationship="Self.FK__Event__establish__4CA06362" FromRole="Establishment" ToRole="Event" />
         </EntityType>
         <EntityType Name="Event">
           <Key>
@@ -321,6 +331,7 @@
           <Property Name="seating" Type="Boolean" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="establish_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Establishment" Relationship="Self.FK__Event__establish__4CA06362" FromRole="Event" ToRole="Establishment" />
         </EntityType>
         <EntityType Name="Message">
           <Key>
@@ -332,6 +343,7 @@
           <Property Name="send_at" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="is_read" Type="Boolean" />
           <Property Name="chat_id" Type="Int32" />
+          <NavigationProperty Name="Chat" Relationship="Self.fk_messages_chat" FromRole="Message" ToRole="Chat" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -339,6 +351,7 @@
           </Key>
           <Property Name="role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Users__role_id__5070F446" FromRole="Role" ToRole="Users" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -352,8 +365,13 @@
           <Property Name="photo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="role_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Armchair" Relationship="Self.FK__Armchair__user_i__48CFD27E" FromRole="Users" ToRole="Armchair" />
+          <NavigationProperty Name="Chat" Relationship="Self.FK__Chat__user1_id__49C3F6B7" FromRole="Users" ToRole="Chat" />
+          <NavigationProperty Name="Chat1" Relationship="Self.FK__Chat__user2_id__4AB81AF0" FromRole="Users" ToRole="Chat" />
+          <NavigationProperty Name="Role" Relationship="Self.FK__Users__role_id__5070F446" FromRole="Users" ToRole="Role" />
+          <NavigationProperty Name="Armchair1" Relationship="Self.Reserve_Ticket" FromRole="Users" ToRole="Armchair" />
         </EntityType>
-        <Association Name="FK__Armchair__establ__44FF419A">
+        <Association Name="FK__Armchair__establ__47DBAE45">
           <End Role="Establishment" Type="Self.Establishment" Multiplicity="0..1" />
           <End Role="Armchair" Type="Self.Armchair" Multiplicity="*" />
           <ReferentialConstraint>
@@ -365,7 +383,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Armchair__user_i__45F365D3">
+        <Association Name="FK__Armchair__user_i__48CFD27E">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Armchair" Type="Self.Armchair" Multiplicity="*" />
           <ReferentialConstraint>
@@ -377,7 +395,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chat__user1_id__48CFD27E">
+        <Association Name="FK__Chat__user1_id__49C3F6B7">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Chat" Type="Self.Chat" Multiplicity="*" />
           <ReferentialConstraint>
@@ -389,7 +407,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chat__user2_id__49C3F6B7">
+        <Association Name="FK__Chat__user2_id__4AB81AF0">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Chat" Type="Self.Chat" Multiplicity="*" />
           <ReferentialConstraint>
@@ -413,7 +431,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Establish__city___398D8EEE">
+        <Association Name="FK__Establish__city___4BAC3F29">
           <End Role="City" Type="Self.City" Multiplicity="1" />
           <End Role="Establishment" Type="Self.Establishment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -425,7 +443,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Event__establish__4222D4EF">
+        <Association Name="FK__Event__establish__4CA06362">
           <End Role="Establishment" Type="Self.Establishment" Multiplicity="1" />
           <End Role="Event" Type="Self.Event" Multiplicity="*" />
           <ReferentialConstraint>
@@ -437,7 +455,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Users__role_id__3F466844">
+        <Association Name="FK__Users__role_id__5070F446">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -453,7 +471,7 @@
           <End Role="Armchair" Type="Self.Armchair" Multiplicity="*" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="MingsEventsEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MingsEventsEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Armchair" EntityType="Self.Armchair" />
           <EntitySet Name="Chat" EntityType="Self.Chat" />
           <EntitySet Name="City" EntityType="Self.City" />
@@ -462,19 +480,19 @@
           <EntitySet Name="Message" EntityType="Self.Message" />
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="Users" EntityType="Self.Users" />
-          <AssociationSet Name="FK__Armchair__establ__44FF419A" Association="Self.FK__Armchair__establ__44FF419A">
+          <AssociationSet Name="FK__Armchair__establ__47DBAE45" Association="Self.FK__Armchair__establ__47DBAE45">
             <End Role="Establishment" EntitySet="Establishment" />
             <End Role="Armchair" EntitySet="Armchair" />
           </AssociationSet>
-          <AssociationSet Name="FK__Armchair__user_i__45F365D3" Association="Self.FK__Armchair__user_i__45F365D3">
+          <AssociationSet Name="FK__Armchair__user_i__48CFD27E" Association="Self.FK__Armchair__user_i__48CFD27E">
             <End Role="Users" EntitySet="Users" />
             <End Role="Armchair" EntitySet="Armchair" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chat__user1_id__48CFD27E" Association="Self.FK__Chat__user1_id__48CFD27E">
+          <AssociationSet Name="FK__Chat__user1_id__49C3F6B7" Association="Self.FK__Chat__user1_id__49C3F6B7">
             <End Role="Users" EntitySet="Users" />
             <End Role="Chat" EntitySet="Chat" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chat__user2_id__49C3F6B7" Association="Self.FK__Chat__user2_id__49C3F6B7">
+          <AssociationSet Name="FK__Chat__user2_id__4AB81AF0" Association="Self.FK__Chat__user2_id__4AB81AF0">
             <End Role="Users" EntitySet="Users" />
             <End Role="Chat" EntitySet="Chat" />
           </AssociationSet>
@@ -482,15 +500,15 @@
             <End Role="Chat" EntitySet="Chat" />
             <End Role="Message" EntitySet="Message" />
           </AssociationSet>
-          <AssociationSet Name="FK__Establish__city___398D8EEE" Association="Self.FK__Establish__city___398D8EEE">
+          <AssociationSet Name="FK__Establish__city___4BAC3F29" Association="Self.FK__Establish__city___4BAC3F29">
             <End Role="City" EntitySet="City" />
             <End Role="Establishment" EntitySet="Establishment" />
           </AssociationSet>
-          <AssociationSet Name="FK__Event__establish__4222D4EF" Association="Self.FK__Event__establish__4222D4EF">
+          <AssociationSet Name="FK__Event__establish__4CA06362" Association="Self.FK__Event__establish__4CA06362">
             <End Role="Establishment" EntitySet="Establishment" />
             <End Role="Event" EntitySet="Event" />
           </AssociationSet>
-          <AssociationSet Name="FK__Users__role_id__3F466844" Association="Self.FK__Users__role_id__3F466844">
+          <AssociationSet Name="FK__Users__role_id__5070F446" Association="Self.FK__Users__role_id__5070F446">
             <End Role="Role" EntitySet="Role" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
@@ -504,7 +522,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MingsEventsModelStoreContainer" CdmEntityContainer="MingsEventsEntities">
+        <EntityContainerMapping StorageEntityContainer="MingsEventsModelStoreContainer" CdmEntityContainer="MingsEventsEntities1">
           <EntitySetMapping Name="Armchair">
             <EntityTypeMapping TypeName="MingsEventsModel.Armchair">
               <MappingFragment StoreEntitySet="Armchair">

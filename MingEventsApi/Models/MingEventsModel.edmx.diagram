@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="901a8198580d459e8f5c89fcd5e5a572" Name="Diagram1">
+      <Diagram DiagramId="9dd8ebcf4dc74552b034413c3ed1ad97" Name="Diagram1" ZoomLevel="80">
         <EntityTypeShape EntityType="MingsEventsModel.Armchair" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MingsEventsModel.Chat" Width="1.5" PointX="9.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MingsEventsModel.City" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
@@ -13,14 +13,14 @@
         <EntityTypeShape EntityType="MingsEventsModel.Message" Width="1.5" PointX="12" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MingsEventsModel.Role" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MingsEventsModel.Users" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
-        <AssociationConnector Association="MingsEventsModel.FK__Armchair__establ__44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="MingsEventsModel.FK__Armchair__user_i__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="MingsEventsModel.FK__Chat__user1_id__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="MingsEventsModel.FK__Chat__user2_id__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Armchair__establ__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Armchair__user_i__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Chat__user1_id__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Chat__user2_id__4AB81AF0" ManuallyRouted="false" />
         <AssociationConnector Association="MingsEventsModel.fk_messages_chat" ManuallyRouted="false" />
-        <AssociationConnector Association="MingsEventsModel.FK__Establish__city___398D8EEE" ManuallyRouted="false" />
-        <AssociationConnector Association="MingsEventsModel.FK__Event__establish__4222D4EF" ManuallyRouted="false" />
-        <AssociationConnector Association="MingsEventsModel.FK__Users__role_id__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Establish__city___4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Event__establish__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="MingsEventsModel.FK__Users__role_id__5070F446" ManuallyRouted="false" />
         <AssociationConnector Association="MingsEventsModel.Reserve_Ticket" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

@@ -20,5 +20,7 @@ namespace MingEventsApi.Models
         public string send_at { get; set; }
         public Nullable<bool> is_read { get; set; }
         public Nullable<int> chat_id { get; set; }
+    
+        public virtual Chat Chat { get; set; }
     }
 }

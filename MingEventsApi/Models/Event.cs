@@ -24,5 +24,7 @@ namespace MingEventsApi.Models
         public bool seating { get; set; }
         public string descripcion { get; set; }
         public int establish_id { get; set; }
+    
+        public virtual Establishment Establishment { get; set; }
     }
 }

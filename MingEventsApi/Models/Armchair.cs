@@ -14,10 +14,21 @@ namespace MingEventsApi.Models
     
     public partial class Armchair
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Armchair()
+        {
+            this.Users1 = new HashSet<Users>();
+        }
+    
         public int armchair_id { get; set; }
         public int columns { get; set; }
         public int rows { get; set; }
         public Nullable<int> user_id { get; set; }
         public Nullable<int> establish_id { get; set; }
+    
+        public virtual Establishment Establishment { get; set; }
+        public virtual Users Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Users> Users1 { get; set; }
     }
 }

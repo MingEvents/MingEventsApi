@@ -13,10 +13,10 @@ namespace MingEventsApi.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MingsEventsEntities : DbContext
+    public partial class MingsEventsEntities1 : DbContext
     {
-        public MingsEventsEntities()
-            : base("name=MingsEventsEntities")
+        public MingsEventsEntities1()
+            : base("name=MingsEventsEntities1")
         {
         }
     
