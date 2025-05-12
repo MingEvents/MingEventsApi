@@ -26,6 +26,8 @@ namespace WebApplicationTgtNotes.Controllers
             var Chat = await db.Chat
                 .Select(c => new
                 {
+                    c.chat_id,
+                    c.send_date,
                     c.user1_id,
                     c.user2_id
                 })
