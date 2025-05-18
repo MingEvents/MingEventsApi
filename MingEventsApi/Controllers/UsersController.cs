@@ -26,7 +26,8 @@ namespace WebApplicationTgtNotes.Controllers
                 .Select(u => new {
                     u.user_id,
                     u.name,
-                    u.email
+                    u.email,
+                    u.photo
                 })
                 .ToListAsync();
 

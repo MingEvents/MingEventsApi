@@ -75,6 +75,7 @@ namespace WebApplicationTgtNotes.Controllers
                 .Where(c => c.user1_id == id || c.user2_id == id)
                 .Select(c => new
                 {
+                    c.chat_id,
                     c.user1_id,
                     c.user2_id
                 })
