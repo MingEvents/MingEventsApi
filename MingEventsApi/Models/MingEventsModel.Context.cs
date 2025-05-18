@@ -31,6 +31,7 @@ namespace MingEventsApi.Models
         public virtual DbSet<Establishment> Establishment { get; set; }
         public virtual DbSet<Event> Event { get; set; }
         public virtual DbSet<Message> Message { get; set; }
+        public virtual DbSet<Reserve_Ticket> Reserve_Ticket { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }

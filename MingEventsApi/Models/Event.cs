@@ -14,6 +14,12 @@ namespace MingEventsApi.Models
     
     public partial class Event
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Event()
+        {
+            this.Reserve_Ticket = new HashSet<Reserve_Ticket>();
+        }
+    
         public int event_id { get; set; }
         public string name { get; set; }
         public int price { get; set; }
@@ -26,5 +32,7 @@ namespace MingEventsApi.Models
         public int establish_id { get; set; }
     
         public virtual Establishment Establishment { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reserve_Ticket> Reserve_Ticket { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace MingEventsApi.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Armchair()
         {
-            this.Users1 = new HashSet<Users>();
+            this.Reserve_Ticket = new HashSet<Reserve_Ticket>();
         }
     
         public int armchair_id { get; set; }
@@ -29,6 +29,6 @@ namespace MingEventsApi.Models
         public virtual Establishment Establishment { get; set; }
         public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users1 { get; set; }
+        public virtual ICollection<Reserve_Ticket> Reserve_Ticket { get; set; }
     }
 }
