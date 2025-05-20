@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 
-namespace WebApplicationTgtNotes.Controllers
+namespace MingEventsApi.Controllers
 {
     public class MessageController : ApiController
     {

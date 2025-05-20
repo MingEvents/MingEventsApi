@@ -8,7 +8,7 @@ using MingEventsApi.Models;
 using System.Linq;
 using System.Net.Http;
 
-namespace WebApplicationTgtNotes.Controllers
+namespace MingEventsApi.Controllers
 {
     public class UsersController : ApiController
     {

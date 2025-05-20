@@ -75,6 +75,7 @@
           <Property Name="armchair_id" Type="int" Nullable="false" />
           <Property Name="user_id" Type="int" Nullable="false" />
           <Property Name="reservation_date" Type="varchar" MaxLength="255" />
+          <Property Name="event_id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -180,6 +181,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Reserve_T__event__5AEE82B9">
+          <End Role="Event" Type="Self.Event" Multiplicity="1" />
+          <End Role="Reserve_Ticket" Type="Self.Reserve_Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="event_id" />
+            </Principal>
+            <Dependent Role="Reserve_Ticket">
+              <PropertyRef Name="event_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Reserve_T__user___4F7CD00D">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Reserve_Ticket" Type="Self.Reserve_Ticket" Multiplicity="*" />
@@ -254,6 +267,10 @@
             <End Role="Armchair" EntitySet="Armchair" />
             <End Role="Reserve_Ticket" EntitySet="Reserve_Ticket" />
           </AssociationSet>
+          <AssociationSet Name="FK__Reserve_T__event__5AEE82B9" Association="Self.FK__Reserve_T__event__5AEE82B9">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="Reserve_Ticket" EntitySet="Reserve_Ticket" />
+          </AssociationSet>
           <AssociationSet Name="FK__Reserve_T__user___4F7CD00D" Association="Self.FK__Reserve_T__user___4F7CD00D">
             <End Role="Users" EntitySet="Users" />
             <End Role="Reserve_Ticket" EntitySet="Reserve_Ticket" />
@@ -312,6 +329,10 @@
           <AssociationSet Name="FK__Event__establish__4CA06362" Association="MingsEventsModel.FK__Event__establish__4CA06362">
             <End Role="Establishment" EntitySet="Establishment" />
             <End Role="Event" EntitySet="Event" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reserve_T__event__5AEE82B9" Association="MingsEventsModel.FK__Reserve_T__event__5AEE82B9">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="Reserve_Ticket" EntitySet="Reserve_Ticket" />
           </AssociationSet>
           <AssociationSet Name="FK__Reserve_T__user___4F7CD00D" Association="MingsEventsModel.FK__Reserve_T__user___4F7CD00D">
             <End Role="Users" EntitySet="Users" />
@@ -383,6 +404,7 @@
           <Property Name="descripcion" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="establish_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Establishment" Relationship="MingsEventsModel.FK__Event__establish__4CA06362" FromRole="Event" ToRole="Establishment" />
+          <NavigationProperty Name="Reserve_Ticket" Relationship="MingsEventsModel.FK__Reserve_T__event__5AEE82B9" FromRole="Event" ToRole="Reserve_Ticket" />
         </EntityType>
         <EntityType Name="Message">
           <Key>
@@ -404,7 +426,9 @@
           <Property Name="armchair_id" Type="Int32" Nullable="false" />
           <Property Name="user_id" Type="Int32" Nullable="false" />
           <Property Name="reservation_date" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="event_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Armchair" Relationship="MingsEventsModel.FK__Reserve_T__armch__4E88ABD4" FromRole="Reserve_Ticket" ToRole="Armchair" />
+          <NavigationProperty Name="Event" Relationship="MingsEventsModel.FK__Reserve_T__event__5AEE82B9" FromRole="Reserve_Ticket" ToRole="Event" />
           <NavigationProperty Name="Users" Relationship="MingsEventsModel.FK__Reserve_T__user___4F7CD00D" FromRole="Reserve_Ticket" ToRole="Users" />
         </EntityType>
         <EntityType Name="Role">
@@ -529,6 +553,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Reserve_T__event__5AEE82B9">
+          <End Type="MingsEventsModel.Event" Role="Event" Multiplicity="1" />
+          <End Type="MingsEventsModel.Reserve_Ticket" Role="Reserve_Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="event_id" />
+            </Principal>
+            <Dependent Role="Reserve_Ticket">
+              <PropertyRef Name="event_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Reserve_T__user___4F7CD00D">
           <End Type="MingsEventsModel.Users" Role="Users" Multiplicity="1" />
           <End Type="MingsEventsModel.Reserve_Ticket" Role="Reserve_Ticket" Multiplicity="*" />
@@ -630,6 +666,7 @@
           <EntitySetMapping Name="Reserve_Ticket">
             <EntityTypeMapping TypeName="MingsEventsModel.Reserve_Ticket">
               <MappingFragment StoreEntitySet="Reserve_Ticket">
+                <ScalarProperty Name="event_id" ColumnName="event_id" />
                 <ScalarProperty Name="reservation_date" ColumnName="reservation_date" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
                 <ScalarProperty Name="armchair_id" ColumnName="armchair_id" />

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.IO;
 
-namespace WebApplicationTgtNotes.Controllers
+namespace MingEventsApi.Controllers
 {
     public class EventController : ApiController
     {

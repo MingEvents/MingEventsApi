@@ -8,7 +8,7 @@ using MingEventsApi.Models;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace WebApplicationTgtNotes.Controllers
+namespace MingEventsApi.Controllers
 {
     public class ReserveTicketController : ApiController
     {

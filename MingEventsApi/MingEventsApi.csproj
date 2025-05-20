@@ -163,6 +163,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\ArmchairController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\ReserveTicketController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ChatController.cs" />

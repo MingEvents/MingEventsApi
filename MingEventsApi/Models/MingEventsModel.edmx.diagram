@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9dd8ebcf4dc74552b034413c3ed1ad97" Name="Diagram1" ZoomLevel="60">
+      <Diagram DiagramId="9dd8ebcf4dc74552b034413c3ed1ad97" Name="Diagram1" ZoomLevel="52">
         <EntityTypeShape EntityType="MingsEventsModel.Armchair" Width="1.5" PointX="5.25" PointY="2.625" />
         <EntityTypeShape EntityType="MingsEventsModel.Chat" Width="1.5" PointX="5.25" PointY="6.125" />
         <EntityTypeShape EntityType="MingsEventsModel.City" Width="1.5" PointX="0.75" PointY="8.125" />
         <EntityTypeShape EntityType="MingsEventsModel.Establishment" Width="1.5" PointX="3" PointY="7.625" />
-        <EntityTypeShape EntityType="MingsEventsModel.Event" Width="1.5" PointX="5.25" PointY="9.375" />
+        <EntityTypeShape EntityType="MingsEventsModel.Event" Width="1.5" PointX="5.25" PointY="9.25" />
         <EntityTypeShape EntityType="MingsEventsModel.Message" Width="1.5" PointX="7.5" PointY="6.125" />
-        <EntityTypeShape EntityType="MingsEventsModel.Reserve_Ticket" Width="1.5" PointX="7.5" PointY="3" />
+        <EntityTypeShape EntityType="MingsEventsModel.Reserve_Ticket" Width="1.5" PointX="7.5" PointY="2.75" />
         <EntityTypeShape EntityType="MingsEventsModel.Role" Width="1.5" PointX="0.75" PointY="3.125" />
         <EntityTypeShape EntityType="MingsEventsModel.Users" Width="1.5" PointX="3" PointY="2.125" />
         <AssociationConnector Association="MingsEventsModel.FK__Armchair__establ__47DBAE45" />
@@ -22,6 +22,7 @@
         <AssociationConnector Association="MingsEventsModel.fk_messages_chat" />
         <AssociationConnector Association="MingsEventsModel.FK__Establish__city___4BAC3F29" />
         <AssociationConnector Association="MingsEventsModel.FK__Event__establish__4CA06362" />
+        <AssociationConnector Association="MingsEventsModel.FK__Reserve_T__event__5AEE82B9" />
         <AssociationConnector Association="MingsEventsModel.FK__Reserve_T__user___4F7CD00D" />
         <AssociationConnector Association="MingsEventsModel.FK__Users__role_id__5070F446" />
       </Diagram>
