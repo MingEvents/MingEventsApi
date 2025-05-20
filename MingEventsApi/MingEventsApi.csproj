@@ -204,6 +204,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MingEventsModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Reserve_Ticket.cs">
+      <DependentUpon>MingEventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Role.cs">
       <DependentUpon>MingEventsModel.tt</DependentUpon>
     </Compile>

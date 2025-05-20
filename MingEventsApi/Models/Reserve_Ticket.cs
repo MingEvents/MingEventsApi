@@ -17,10 +17,8 @@ namespace MingEventsApi.Models
         public int armchair_id { get; set; }
         public int user_id { get; set; }
         public string reservation_date { get; set; }
-        public int event_id { get; set; }
     
         public virtual Armchair Armchair { get; set; }
-        public virtual Event Event { get; set; }
         public virtual Users Users { get; set; }
     }
 }
