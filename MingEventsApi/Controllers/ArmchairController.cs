@@ -86,7 +86,7 @@ namespace MingEventsApi.Controllers
                 return NotFound();
 
             return Ok(armchairs);
-        }
+        }   
 
         // POST: api/Armchair
         [HttpPost]

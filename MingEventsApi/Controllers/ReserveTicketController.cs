@@ -85,6 +85,28 @@ namespace MingEventsApi.Controllers
             return Ok(tickets);
         }
 
+        // GET: api/ReserveTicket/ReservedSeatsByEvent/{event_id}
+        [HttpGet]
+        [Route("api/ReserveTicket/ReservedSeatsByEvent/{event_id:int}")]
+        [ResponseType(typeof(IEnumerable<object>))]
+        public async Task<IHttpActionResult> GetReservedSeatsByEvent(int event_id)
+        {
+            db.Configuration.LazyLoadingEnabled = false;
+
+            var reservedSeats = await db.Reserve_Ticket
+                .Where(r => r.event_id == event_id)
+                .Include(r => r.Armchair)
+                .Select(r => new
+                {
+                    row = r.Armchair.rows,
+                    column = r.Armchair.columns
+                })
+                .ToListAsync();
+
+            if (reservedSeats == null || !reservedSeats.Any())
+                return NotFound();
+            return Ok(reservedSeats);
+        }
         // POST: api/ReserveTicket
         [HttpPost]
         [Route("api/ReserveTicket")]

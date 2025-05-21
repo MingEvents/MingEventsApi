@@ -36,7 +36,7 @@ namespace MingEventsApi.Controllers
 
         // GET: api/Users/{id}
         [HttpGet]
-        [Route("api/Users/{id:int}")]
+        [Route("api/Users/{id:int}", Name = "GetUserById")]
         [ResponseType(typeof(object))]
         public async Task<IHttpActionResult> GetUser(int id)
         {
@@ -69,7 +69,7 @@ namespace MingEventsApi.Controllers
             db.Users.Add(user);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = user.user_id }, user);
+            return CreatedAtRoute("GetUserById", new { id = user.user_id }, user.user_id);
         }
 
         // PUT: api/Users/{id}
