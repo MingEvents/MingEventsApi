@@ -99,7 +99,8 @@ namespace MingEventsApi.Controllers
                 .Select(r => new
                 {
                     row = r.Armchair.rows,
-                    column = r.Armchair.columns
+                    column = r.Armchair.columns,
+                    id = r.armchair_id
                 })
                 .ToListAsync();
 
