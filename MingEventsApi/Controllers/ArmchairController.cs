@@ -77,8 +77,6 @@ namespace MingEventsApi.Controllers
                     a.armchair_id,
                     a.columns,
                     a.rows,
-                    a.user_id,
-                    a.establish_id
                 })
                 .ToListAsync();
 
