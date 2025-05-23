@@ -7,6 +7,7 @@ using System.Data.Entity.Infrastructure;
 using MingEventsApi.Models;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace MingEventsApi.Controllers
 {
@@ -60,7 +61,7 @@ namespace MingEventsApi.Controllers
             return Ok(ticket);
         }
 
-        // GET: api/ReserveTicket/user/{user_id}
+        // GET: api/ReserveTicket/user/{user_id:int}
         [HttpGet]
         [Route("api/ReserveTicket/user/{user_id:int}")]
         [ResponseType(typeof(IEnumerable<object>))]
@@ -68,19 +69,33 @@ namespace MingEventsApi.Controllers
         {
             db.Configuration.LazyLoadingEnabled = false;
 
-            var tickets = await db.Reserve_Ticket
-                .Where(r => r.user_id == user_id)
-                .Select(r => new
+
+            var query = await (
+                from r in db.Reserve_Ticket
+                where r.user_id == user_id
+                join e in db.Event on r.event_id equals e.event_id into eventGroup
+                from e in eventGroup.DefaultIfEmpty()
+                select new
                 {
                     r.armchair_id,
                     r.user_id,
                     r.reservation_date,
-                    r.event_id
+                    r.event_id,
+                    e.start_date
                 })
                 .ToListAsync();
 
-            if (tickets == null || !tickets.Any())
-                return NotFound();
+            var tickets = query
+                .Where(t => t.start_date == null ||
+                            (DateTime.Parse(t.start_date) >= DateTime.Now.Date))
+                .Select(t => new
+                {
+                    t.armchair_id,
+                    t.user_id,
+                    t.reservation_date,
+                    t.event_id
+                })
+                .ToList();
 
             return Ok(tickets);
         }
@@ -98,9 +113,9 @@ namespace MingEventsApi.Controllers
                 .Include(r => r.Armchair)
                 .Select(r => new
                 {
-                    row = r.Armchair.rows,
-                    column = r.Armchair.columns,
-                    id = r.armchair_id
+                    rows = r.Armchair.rows,
+                    columns = r.Armchair.columns,
+                    armchair_id = r.armchair_id
                 })
                 .ToListAsync();
 
